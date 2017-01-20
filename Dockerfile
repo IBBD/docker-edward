@@ -23,7 +23,8 @@ RUN \
     && pip install pystan \
     && pip install pymc3 \
     && export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0-cp35-cp35m-linux_x86_64.whl \
-    && pip install --upgrade $TF_BINARY_URL
+    && pip install --upgrade $TF_BINARY_URL \
+    && pip install edward
 
 # 代码目录
 RUN mkdir -p /var/www
