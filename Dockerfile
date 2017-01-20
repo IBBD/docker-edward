@@ -26,6 +26,12 @@ RUN \
     && pip install --upgrade $TF_BINARY_URL \
     && pip install edward
 
+# Fixed: WARNING (theano.configdefaults): g++ not detected!
+RUN \
+    apt-get update \
+    && apt-get install build-essential \
+    && apt-get clean
+
 # 代码目录
 RUN mkdir -p /var/www
 
